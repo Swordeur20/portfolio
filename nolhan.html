@@ -14,12 +14,14 @@
 <p><a href="index.html">← Retour à l'accueil </a> </p>
 </header>
 <main>
-- Ta présentation 
 <section>
-<h2>À propos de moi </h2>
+    <div class="propos">
+<h3>À propos de moi </h3>
 <p>Je suis un élève de seconde au lycée pasteur a Hénin beaumont, je suis
     actuellement en stage chez Epitech.   </p>
-<h3>Mes passions</h3>
+</div class="propos">
+  
+    <h1 class="mes-passions">Mes passions</h1>
 <p><img src="images/Nolhan/handball.png" alt="Handball logo" style="width: 15px; height: 15px;">-Handball<br>
     <img src="images/Nolhan/develloppement.png" alt="image Development" style="width: 15px; height: 15px;">-développement<br>
      &nbsp;   &nbsp;  &nbsp;-jeux vidéo <br>
@@ -34,20 +36,42 @@
 </body>
 </html>
 <style>
+
 header h1 {
     text-align: center;
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
-section {
-    background-color: #ffffff;
-    padding: 20px;
+div.propos {
+    text-align: left; 
+    display: inline-block;
+     vertical-align: top;
+     font-size: 25px;
+    background-color: #073A59;
     border-radius: 10px;
-    margin-bottom: 20px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 20%;
 }
+ h1.mes-passions {
+    display: inline-block; 
+    vertical-align: top;
+    font-size: 30px;
+    background-color: #073A59;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 1000%;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
 body {
     background-color: #081826;
+    color: white;
+
 }
+
+
 </style>
