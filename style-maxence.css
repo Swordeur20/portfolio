@@ -12,6 +12,8 @@ h1, h2 {
 
 h1 {
     font-size: 45px;
+    text-align: center;
+    margin-left: 14rem;
 }
 
 /* Fond de page */
@@ -61,17 +63,4 @@ section {
     width: 250px;
     border-radius: 10px;
     object-fit: cover;
-}
-
-/* Responsive téléphone */
-@media (max-width: 768px) {
-    .bloc,
-    .bloc.inverse {
-        flex-direction: column;
-    }
-
-    .bloc img {
-        width: 100%;
-        max-width: 400px;
-    }
 }
