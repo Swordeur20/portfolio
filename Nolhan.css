@@ -1,0 +1,122 @@
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+a { 
+    color: #ffffff;
+}
+div.retour {
+    border-radius: 10px;
+    background-color: #048ABF;
+    text-align: center;
+    max-width: 200px;
+    max-height: 50px;
+    margin-top: -100px;
+
+}
+.propos {
+    text-align: left; 
+    display: inline-block;
+     vertical-align: top;
+     font-size: 25px;
+    background-color: #073A59;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin-top: 20px;
+    flex: 0 0 300px;
+}
+h1.mes-passions {
+    text-align: center;
+    font-size: 30px;
+    background-color: #073A59;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.cards-container {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+    margin-top: 20px;
+    flex-direction: row;
+}
+.card {
+    flex: 1;
+    max-width: none;
+    min-height: 110px;
+    background-color: #073A59;
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+    transition: max-height 2s ease, padding 1.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.card img {
+    width: 40px;
+    height: auto;
+    margin: 0;
+}
+.card.active .hidden {
+    max-height: 5000px;
+    opacity: 1;
+    margin-top: 10px;
+}
+.card.active {
+    max-height: 400px;
+}
+.card.active .fleche_bas{
+    transform: rotate(360deg);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 10px;
+    max-width: 1450px;
+    margin-top: 40px;
+}
+.content {
+    flex: 1;
+}
+.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 2s ease;
+}
+body {
+    background-color: #081826;
+    color: white;
+
+}
+img {
+  vertical-align:middle;
+}
+.manga img {
+    width: 80px;
+    height: auto;
+    margin: 0;
+}
+.fleche_bas {
+    margin-top: auto;
+    width: 30px;
+    height: auto;
+}

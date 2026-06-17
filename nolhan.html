@@ -4,74 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mon Portfolio - Nolhan Lefer </title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Nolhan.css">
 </head>
 <body>
 <header>
-<h1> Bienvenue sur le site de Nolhan Lefer !    
-<img src="images/Nolhan/photo nolhan.jpg" alt="mon portrait" style="width: 100px; height: 100px; border-radius: 50%;" align="middle"/> 
-</h1>
-<p><a href="index.html">← Retour à l'accueil </a> </p>
+    <h1> Bienvenue sur le site de Nolhan Lefer !    
+        <img src="images/Nolhan/photo nolhan.jpg" alt="mon portrait" style="width: 100px; height: 100px; border-radius: 50%;" align="middle"/> 
+    </h1>
+    <div class="retour">
+        <p>
+        <a href="index.html">← Retour à l'accueil </a>
+        </p>
+    </div>
 </header>
 <main>
-<section>
-    <div class="propos">
-<h3>À propos de moi </h3>
-<p>Je suis un élève de seconde au lycée pasteur a Hénin beaumont, je suis
-    actuellement en stage chez Epitech.   </p>
-</div class="propos">
-  
-    <h1 class="mes-passions">Mes passions</h1>
-<p><img src="images/Nolhan/handball.png" alt="Handball logo" style="width: 15px; height: 15px;">-Handball<br>
-    <img src="images/Nolhan/develloppement.png" alt="image Development" style="width: 15px; height: 15px;">-développement<br>
-     &nbsp;   &nbsp;  &nbsp;-jeux vidéo <br>
-     &nbsp;  &nbsp;   &nbsp;-manga<br> </p>
-</section>
+    <div class="layout">
+        <div class="propos">
+            <h3>À propos de moi </h3>
+            <p>Je suis un élève de seconde au lycée pasteur a Hénin beaumont, je suis
+                actuellement en stage chez Epitech.   </p>
+        </div>
+        <div class="content">
+        <h1 class="mes-passions">Mes passions</h1>
+            <div class="cards-container">
+
+                <div class="handball card ">
+                <img src="images/Nolhan/handball.png" alt="Handball">
+                    <h3>Handball</h3>
+                    </div>
+                    <p class="hidden">
+                    je pratique le handball depuis mainteanant plus de 5 ans, je joue actuellement au club de rouvroy en section -18, je joue au post de pivot et ailié.
+                    </p>
+                    <div class="fleche_bas">
+                        <img src="images/Nolhan/fleche_bas.png">
+                    </div>
+                </div>
+
+                <div class="development card">
+                    <img src="images/Nolhan/develloppement.png" alt="Développement">
+                    <h3>Développement</h3>
+                    <p class="hidden">
+                    je suis passionné par la programmation ainsi que le développement depuis mon plus jeune age, j'ai toujours révé de crée des jeux, applications et sites web,et plus recement, de créer une IA.C 'est aussi la riason pour laquelle je suis ici a ce stage de seconde chez Epitech.'
+                    </p>
+                </div>
+
+                <div class="jeux-video card">
+                    <img src="images/Nolhan/jvd.png" alt="jeux vidéo">
+                    <h3>Jeux vidéo</h3>
+                    <p class="hidden">
+                    Passionné de jeux vidéo depuis mon plus jeune âge, je me suis d’abord intéressé au gameplay et aux mécaniques, avant de découvrir l’importance de la narration. Aujourd’hui, je les considère comme un art et je m’intéresse à la création de jeux, du modeling au level design.
+                    </p> 
+                </div> 
+                    
+                <div class="manga card">
+                    <img src="images/Nolhan/Manga.png" alt="Manga"> 
+                    <h3>Manga</h3>
+                    <p class="hidden">
+                    je suis un grand fan de manga et d'animé mais je vais pas m'éternser la dessus sinon j'en aurait pour des heures à la place je vais faire un top  5 de mes manga/anime preférés.
+                    <br>
+                    <br>
+                    <a href="https://fr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure" target="_blank">1. JoJo's Bizarre Adventure</a>
+                    <br>
+                    <a href="https://fr.wikipedia.org/wiki/One_Piece" target="_blank">2. One Piece</a>
+                    <br>
+                    <a href="https://fr.wikipedia.org/wiki/Dr._Stone" target="_blank">3. Dr. Stone</a>
+                    <br>
+                    <a href="https://fr.wikipedia.org/wiki/Bloom_(manga)" target="_blank">4. Bloom</a>
+                    <br>
+                    <a href="https://fr.wikipedia.org/wiki/Death_Note" target="_blank">5. Death Note</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 </main>
 <footer>
 <p>© 2026 - Nolhan Lefer | Fait avec passion <img src="images/Epitech_Official_Logo.png" alt="logo epitech" 
     style="width: 60px; height: 15px;">  </p>
 </footer>
-<script src="script.js"> </script>
+<script src="nolhan.js"> </script>
 </body>
-</html>
-<style>
-
-header h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-div.propos {
-    text-align: left; 
-    display: inline-block;
-     vertical-align: top;
-     font-size: 25px;
-    background-color: #073A59;
-    border-radius: 10px;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    max-width: 20%;
-}
- h1.mes-passions {
-    display: inline-block; 
-    vertical-align: top;
-    font-size: 30px;
-    background-color: #073A59;
-    border-radius: 10px;
-    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    max-width: 1000%;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-body {
-    background-color: #081826;
-    color: white;
-
-}
-
-
-</style>
+    </html>
