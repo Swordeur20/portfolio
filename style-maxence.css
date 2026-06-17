@@ -1,15 +1,77 @@
-header h1 {
-    color: #f9f9f9;
-    text-align: center;
-    font-size: 80px;
-    font-family: 'Times New Roman', Times, serif;
-    
-}
-
-.skill-tag {
-    text-align: center;
-}
-
-html {
+body {
     color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+/* Fond de page */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwheelfront.com%2Fwp-content%2Fuploads%2Fformidable%2F8%2Fblack-mclaren-720s-supercar-murdered-out-aftermarket-custom-wheels-adv1-b.jpg&f=1&nofb=1&ipt=b42de97a83cbb9ddc1b28fe7414e3cb09d67111dc89d6f2d1e33eb2ca25f0e53");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(2px);
+    transform: scale(1.05);
+    z-index: -1;
+}
+
+/* Encadré gris */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    background: rgba(0,0,0,0.25);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* Texte + image */
+.bloc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Inverse image/texte */
+.bloc.inverse {
+    flex-direction: row-reverse;
+}
+
+.bloc img {
+    width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive téléphone */
+@media (max-width: 768px) {
+    .bloc,
+    .bloc.inverse {
+        flex-direction: column;
+    }
+
+    .bloc img {
+        width: 100%;
+        max-width: 400px;
+    }
 }
