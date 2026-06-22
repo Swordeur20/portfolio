@@ -94,6 +94,8 @@ body {
     margin: 0;
     min-height: 100vh;
     padding-top: 90px;
+    margin: 0;
+    background-color: #FAF3E1; /* ton fond global */
     
 }
 
@@ -118,37 +120,77 @@ h1 {
     text-align: center;
 }
 
-/* Fond de page */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.15),
-            rgba(0, 0, 0, 0.25)
-        ),
-        /*url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwheelfront.com%2Fwp-content%2Fuploads%2Fformidable%2F8%2Fblack-mclaren-720s-supercar-murdered-out-aftermarket-custom-wheels-adv1-b.jpg&f=1&nofb=1&ipt=b42de97a83cbb9ddc1b28fe7414e3cb09d67111dc89d6f2d1e33eb2ca25f0e53");
-        */
-        url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1735114.jpg&f=1&nofb=1&ipt=f98bb07f679c92db0f5bac317ac52b662490bee066cc0aaff5ba4f55bd9705b8");
 
-    background-size: cover;
-    background-position: center;
+.hero {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 
-    filter: blur(2px);
-    transform: scale(1.05);
-    z-index: -1;
+  background-color: #FAF3E1;
 }
 
-/* Encadré gris */
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    background: rgba(0,0,0,0.25);
-    padding: 30px;
-    border-radius: 15px;
-    backdrop-filter: blur(5px);
+/* IMAGE seule (miroir uniquement ici) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("https://wallpapercrafter.com/desktop/149689-McLaren-car-vehicle-digital-art-McLaren-720S-dark-monochrome-black-simple-background-minimalism-black-background.jpg");
+  background-size: cover;
+  background-position: center;
+
+  transform: scaleX(-1);
+
+  filter: blur(1px); /* 🌫️ flou ici */
+
+  z-index: 0;
+}
+
+/* GRADIENT PAR-DESSUS (NON inversé) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    #FAF3E1 30%,
+    rgba(250,243,225,0) 110%
+  );
+
+  z-index: 1;
+}
+
+
+
+.titlebloc {
+
+    color: #222222;
+    margin-top: 13rem;
+    font-size: 80px;
+    margin-left: 4rem;
+    font-family: "Moderniz", sans-serif;
+    line-height: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.undertitle{
+
+    color: #F5E7C6;
+    font-size: 55px;
+
+}
+
+@font-face {
+    font-family: "Moderniz";
+    src: url("fonts/Moderniz.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Texte + image */
@@ -156,14 +198,26 @@ section {
     display: flex;
     align-items: center;
     gap: 20px;
+    max-width: 1500px;
+    margin: 30px auto;
+    background: rgba(0,0,0,0.25);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 .bloc-title {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-top: 5rem;
+    margin-top: 56rem;
     text-align: center;
+    max-width: 1500px;
+    margin: 30px auto;
+    background: rgba(0,0,0,0.25);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
 }
 
 /* Inverse image/texte */
