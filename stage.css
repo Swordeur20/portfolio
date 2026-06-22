@@ -1,0 +1,160 @@
+header h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+a { 
+    color: #ffffff;
+}
+
+
+
+.interupteur {  
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 100px;  /* On donne la même largeur que ton image .day */
+    height: 40px;  /* À ajuster selon la hauteur de ton image d'interrupteur */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Les fonds occupent tout l'espace du conteneur */
+.interupteur img.day, 
+.interupteur img.night {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Par défaut, le fond nuit est caché */
+.interupteur img.night {
+    display: none;
+}
+
+/* --- POSITIONNEMENT DES ASTRES (Soleil / Lune) --- */
+.interupteur img.sun, 
+.interupteur img.moon {
+    position: absolute;
+    width: 30px; /* Taille de la pastille */
+    height: auto;
+    top: 5px;   /* Aligne verticalement l'astre au centre du bouton */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* En mode JOUR : le soleil est à gauche, la lune est cachée à gauche */
+.interupteur img.sun {
+    left: 5px;
+    opacity: 1;
+}
+.interupteur img.moon {
+    left: 5px;
+    opacity: 0;
+}
+
+/* --- ÉTAT QUAND LE MODE NUIT EST ACTIF (.nightactive) --- */
+
+/* On intervertit les fonds */
+.interupteur.nightactive img.day {
+    display: none;
+}
+.interupteur.nightactive img.night {
+    display: block;
+}
+
+/* En mode NUIT : on glisse les deux vers la droite (ex: 60px) */
+/* Le soleil s'efface, la lune apparaît */
+.interupteur.nightactive img.sun {
+    transform: translateX(60px); /* Ajuste cette valeur pour caler l'astre à droite */
+    opacity: 0;
+}
+
+.interupteur.nightactive img.moon {
+    transform: translateX(60px); /* Ajuste cette valeur pour caler l'astre à droite */
+    opacity: 1;
+}
+div.retour {
+    border-radius: 10px;
+    background-color: #049DD9;
+    text-align: center;
+   width: 100px;
+   height: 20px;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.semaines{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+.semaine1{
+    border-radius: 10px;
+    width: 30%;
+    background-color: #073A59;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    height: auto;
+    padding: 20px;
+}
+.semaine2{
+    border-radius: 10px;
+    width: 30%;
+    background-color: #073A59;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    height: auto;
+    padding: 20px;
+}
+
+
+.card{
+    max-width: none;
+    min-height: 30px;
+    max-height: 30px;
+    background-color: #048ABF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 12px #000000;
+    padding: 8px;
+    text-align: center;
+    transition: max-height 1s ease, padding 1.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 300px;
+    max-width: 300px;
+}
+.jours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.hidden{
+    opacity: 0;
+    overflow: hidden;
+        margin-top: 0px;
+    transition: all 1s ease;
+}
+.card.active {
+    max-height: 150px;
+}
+.card.active .hidden{
+    opacity: 1;
+    margin-top: -30px;
+}
+body{
+    background-color: #081826;
+    color: #ffffff;
+}

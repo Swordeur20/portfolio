@@ -1,89 +1,229 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Portfolio - Nolhan Lefer </title>
-<link rel="stylesheet" href="Nolhan.css">
-</head>
-<body>
-<header>
-    <h1> Bienvenue sur le site de Nolhan Lefer !    
-        <img src="images/Nolhan/photo nolhan.jpg" alt="mon portrait" style="width: 100px; height: 100px; border-radius: 50%;" align="middle"/> 
-    </h1>
-    <div class="retour">
-        <p>
-        <a href="index.html">← Retour à l'accueil </a>
-        </p>
-    </div>
-</header>
-<main>
-    <div class="layout">
-        <div class="propos">
-            <h3>À propos de moi </h3>
-            <p>Je suis un élève de seconde au lycée pasteur a Hénin beaumont, je suis
-                actuellement en stage chez Epitech.   </p>
-        </div>
-        <div class="content">
-        <h1 class="mes-passions">Mes passions</h1>
-            <div class="cards-container">
-
-                <div class="handball card ">
-                <img src="images/Nolhan/handball.png" alt="Handball">
-                    <h3>Handball</h3>
-                    </div>
-                    <p class="hidden">
-                    je pratique le handball depuis mainteanant plus de 5 ans, je joue actuellement au club de rouvroy en section -18, je joue au post de pivot et ailié.
-                    </p>
-                    <div class="fleche_bas">
-                        <img src="images/Nolhan/fleche_bas.png">
-                    </div>
-                </div>
-
-                <div class="development card">
-                    <img src="images/Nolhan/develloppement.png" alt="Développement">
-                    <h3>Développement</h3>
-                    <p class="hidden">
-                    je suis passionné par la programmation ainsi que le développement depuis mon plus jeune age, j'ai toujours révé de crée des jeux, applications et sites web,et plus recement, de créer une IA.C 'est aussi la riason pour laquelle je suis ici a ce stage de seconde chez Epitech.'
-                    </p>
-                </div>
-
-                <div class="jeux-video card">
-                    <img src="images/Nolhan/jvd.png" alt="jeux vidéo">
-                    <h3>Jeux vidéo</h3>
-                    <p class="hidden">
-                    Passionné de jeux vidéo depuis mon plus jeune âge, je me suis d’abord intéressé au gameplay et aux mécaniques, avant de découvrir l’importance de la narration. Aujourd’hui, je les considère comme un art et je m’intéresse à la création de jeux, du modeling au level design.
+<!DOCTYPE html> 
+<html lang="fr"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>
+            Mon Portfolio - Nolhan Lefer
+        </title> 
+        <link rel="stylesheet" href="Nolhan.css"> 
+    </head> 
+    <body> 
+        <header> 
+            <h1> 
+                Bienvenue sur le site de Nolhan Lefer ! 
+                <img src="images/Nolhan/photo nolhan.jpg" alt="mon portrait" style="width: 100px; height: 100px; border-radius: 50%;" align="middle"/> 
+            </h1> 
+            <div class="retour"> 
+                <p> 
+                    <a 
+                    id="index"
+                    href="index.html">
+                        ← Retour à l'accueil 
+                    </a> 
+                </p> 
+            </div>
+<div class="interupteur nightactive" id="theme-toggle">
+    <!-- Les fonds de l'interrupteur -->
+    <img src="/images/Nolhan/day.png" class="day" alt="Mode Jour">
+    <img src="/images/Nolhan/night.png" class="night" alt="Mode Nuit">
+    
+    <!-- Les icônes qui bougent -->
+    <img src="/images/Nolhan/sun.png" class="sun" alt="Soleil">
+    <img src="/images/Nolhan/moon.png" class="moon" alt="Lune">
+</div>
+</div>
+        </header> 
+        <main> 
+            <div class="layout"> 
+                <div class="info">
+                <div class="propos"> 
+                    <h3>
+                        À propos de moi 
+                    </h3> 
+                    <p>
+                        Je suis un élève de seconde au lycée pasteur a Hénin beaumont, je suis actuellement en stage chez Epitech. 
                     </p> 
                 </div> 
-                    
-                <div class="manga card">
-                    <img src="images/Nolhan/Manga.png" alt="Manga"> 
-                    <h3>Manga</h3>
-                    <p class="hidden">
-                    je suis un grand fan de manga et d'animé mais je vais pas m'éternser la dessus sinon j'en aurait pour des heures à la place je vais faire un top  5 de mes manga/anime preférés.
-                    <br>
-                    <br>
-                    <a href="https://fr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure" target="_blank">1. JoJo's Bizarre Adventure</a>
-                    <br>
-                    <a href="https://fr.wikipedia.org/wiki/One_Piece" target="_blank">2. One Piece</a>
-                    <br>
-                    <a href="https://fr.wikipedia.org/wiki/Dr._Stone" target="_blank">3. Dr. Stone</a>
-                    <br>
-                    <a href="https://fr.wikipedia.org/wiki/Bloom_(manga)" target="_blank">4. Bloom</a>
-                    <br>
-                    <a href="https://fr.wikipedia.org/wiki/Death_Note" target="_blank">5. Death Note</a>
-                    </p>
-
+                <div class="cs">
+                    <a href="stage.html">
+                        contenu du stage
+                    </a>
                 </div>
+                </div>
+                <div class="content"> 
+                    <h1 class="mes-passions">
+                        Mes passions
+                    </h1> 
+                    <div class="cards-container"> 
+                        <div class="handball card "> 
+                            <img src="images/Nolhan/handball.png" alt="Handball"> 
+                            <h3>
+                                Handball
+                            </h3> 
+                            <p class="hidden"> 
+                                je pratique le handball depuis mainteanant plus de 5 ans, je joue actuellement au club de rouvroy en section -18, je joue au post de pivot et ailié. 
+                            </p> 
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="development card"> 
+                            <img src="images/Nolhan/develloppement.png" alt="Développement"> 
+                            <h3>
+                                Développement
+                            </h3> 
+                            <p class="hidden"> 
+                                je suis passionné par la programmation ainsi que le développement depuis mon plus jeune age, j'ai toujours révé de crée des jeux, applications et sites web,et plus recement, de créer une IA.C 'est aussi la riason pour laquelle je suis ici a ce stage de seconde chez Epitech.' 
+                            </p> 
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="jeux-video card"> 
+                            <img src="images/Nolhan/jvd.png" alt="jeux vidéo"> 
+                            <h3>
+                                Jeux vidéo
+                            </h3> 
+                            <p class="hidden"> 
+                                Passionné de jeux vidéo depuis mon plus jeune âge, je me suis d’abord intéressé au gameplay et aux mécaniques, avant de découvrir l’importance de la narration. Aujourd’hui, je les considère comme un art et je m’intéresse à la création de jeux, du modeling au level design. 
+                            </p> 
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="manga card"> 
+                            <img src="images/Nolhan/Manga.png" alt="Manga"> 
+                            <h3>
+                                Manga
+                            </h3> 
+                            <p class="hidden"> 
+                                je suis un grand fan de manga et d'animé mais je vais pas m'éternser la dessus sinon j'en aurait pour des heures à la place je vais faire un top 5 de mes manga/anime preférés. 
+                                <br> 
+                                <br> 
+                                <a 
+                                id="index" 
+                                href="https://fr.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure" target="_blank">1. JoJo's Bizarre Adventure 
+                                </a> 
+                                <br> 
+                                <a 
+                                id="index"
+                                 href="https://fr.wikipedia.org/wiki/One_Piece" target="_blank">2. One Piece                                    
+                                </a> 
+                                <br> 
+                                <a 
+                                id="index" 
+                                href="https://fr.wikipedia.org/wiki/Dr._Stone" target="_blank">3. Dr. Stone              
+                                </a> 
+                                <br> 
+                                <a 
+                                id="index" 
+                                href="https://fr.wikipedia.org/wiki/Bloom_(manga)" target="_blank">4. Bloom                                   
+                                </a> 
+                                <br> 
+                                <a 
+                                id="index" 
+                                href="https://fr.wikipedia.org/wiki/Death_Note" target="_blank">5. Death Note  
+                                </a> 
+                            </p>
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div>  
+                        </div> 
+                    </div> 
+                    <h1 class="mes-projets">
+                        Mes projets
+                    </h1> 
+                    <div class="cards-container"> 
+                        <div class="premiere card "> 
+                            <h3>
+                                premiére
+                            </h3> 
+                            <p class="hidden"> 
+                               premiére générale : 
+                               <br>
+                                -math
+                                <br>
+                                -si
+                                <br>
+                                -nsi
+                            </p>
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="terminale card"> 
+                            <h3>
+                                terminale
+                            </h3> 
+                            <p class="hidden"> 
+                                terminale générale:
+                                <br>
+                                -si
+                                <br>
+                                -nsi
+                            </p> 
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="études sup card"> 
+                            <h3>
+                                études supérieur
+                            </h3> 
+                            <p class="hidden"> 
+                                Epitech ?
+                            </p> 
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div> 
+                        </div> 
+                        <div class="projet avenir card" > 
+                            <h3>
+                                projet a venir
+                            </h3> 
+                            <p class="hidden"> 
+                                dévellopeur (jeux vidéo)
+                            </p>
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div>  
+                        </div> 
+                        <div class="projet actuel card" > 
+                            <h3>
+                                projet actuel
+                            </h3> 
+                            <p class="hidden"> 
+                                j'aimerai:
+                                   <br> -crée mon propre jeux
 
-            </div>
-        </div>
+                                    <br>-crée ma propre application
+                                    <br>-crée un site web
+
+                            </p>
+                            <div class="fleche_bas"> 
+                                <img src="images/Nolhan/fleche_bas.png"> 
+                            </div>  
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </main> 
+        <footer> 
+            <p>© 2026 - Nolhan Lefer | Fait avec passion 
+                <img src="images/Epitech_Official_Logo.png" alt="logo epitech" style="width: 60px; height: 15px;"> 
+            </p> 
+            <div class="conteneur-bouton">
+    <div class="Bouton">
+        <a href="https://www.lycee-pasteur.fr/" id="Mon-lycee">Mon lycée</a>
     </div>
-</main>
-<footer>
-<p>© 2026 - Nolhan Lefer | Fait avec passion <img src="images/Epitech_Official_Logo.png" alt="logo epitech" 
-    style="width: 60px; height: 15px;">  </p>
-</footer>
-<script src="nolhan.js"> </script>
-</body>
-    </html>
+    <div class="Bouton">
+        <a href="https://www.epitech.eu/" id="Epitech">Epitech</a>    
+    </div>
+</div>
+        </footer> 
+        <script src="nolhan.js"> 
+
+        </script> 
+    </body> 
+</html>

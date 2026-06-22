@@ -1,0 +1,179 @@
+body {
+    background-color: #BFA004;
+}
+.entete {
+    border-radius: 10px;
+    border-color: black;
+    background-color: #BFA004;
+    border: 10px solid;
+    text-align: center;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+main{
+    background-color: #D9B504;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 450px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.grid-portfolios{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+.un{
+    display: flex;
+    flex-direction: row;
+    gap: 155px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.deux{
+    display: flex;
+    flex-direction: row;
+    gap: 156px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.welcome-section{
+    text-align: center;
+}
+.student-card1{
+    border-radius: 10px;
+    border-color: black;
+    border: solid;
+    width: 130px;
+    height: 195px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity;
+}
+.student-card2{
+    border-radius: 10px;
+    background-color: #081826;
+    border: solid;
+    width: 130px;
+    height: 195px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 1s ease, height 1s ease;
+
+}.student-card3{
+    border-radius: 10px;
+    color: #f4410a;
+    border-color: black;
+    border: solid;
+    width: 130px;
+    height: 195px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #12065f;
+    transition: width 1s ease, height 1s ease;
+}.student-card4{
+    border-radius: 10px;
+    border: solid;
+    width: 130px;
+    height: 195px;
+    text-align: center;
+    margin-top: -75px;
+    display: flex;
+    flex-direction: column;
+    border-color: #ff4b9a;
+  box-shadow:
+      0 0 6px rgba(255,75,154,0.9),
+  0 0 30px rgba(255,75,154,0.4),
+  0 0 12px rgba(225,61,133,0.6),
+  0 0 21px rgba(225,61,133,0.9),
+  0 0 34px rgba(168,44,99,0.8),
+  0 0 54px rgba(168,44,99,0.9);
+    background-color: #1b0b3a;
+    color: #00f5ff;
+  text-shadow:
+    0 0 3px rgba(0,245,255,0.9),
+    0 0 15px rgba(0,245,255,0.4),
+    0 0 6px rgba(0,200,214,0.6),
+    0 0 10px rgba(0,200,214,0.9),
+    0 0 12px rgba(0,149,163,0.8),
+    0 0 27px rgba(0,149,163,0.9);
+    transition: width 1s ease, height 1s ease;
+}
+.student-card5{
+    border-radius: 10px;  
+    border: solid;
+    width: 130px;
+    height: 195px;  
+    margin-top: -75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.25)
+        ),
+        /*url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwheelfront.com%2Fwp-content%2Fuploads%2Fformidable%2F8%2Fblack-mclaren-720s-supercar-murdered-out-aftermarket-custom-wheels-adv1-b.jpg&f=1&nofb=1&ipt=b42de97a83cbb9ddc1b28fe7414e3cb09d67111dc89d6f2d1e33eb2ca25f0e53");
+        */
+        url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1735114.jpg&f=1&nofb=1&ipt=f98bb07f679c92db0f5bac317ac52b662490bee066cc0aaff5ba4f55bd9705b8");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: width 1s ease, height 1s ease;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+}
+.student-card1 a,
+.student-card2 a,
+.student-card3 a,
+.student-card4 a,
+.student-card5 a {
+    margin-top: 70px;
+}
+.student-card2 a,
+.student-card5 a 
+{
+    color: white;
+}
+.student-card4 a
+{
+    color: #00f5ff;
+}
+.student-card3 a
+{
+    color: gold;
+}
+.student-card1:hover {
+    opacity: 0;
+}
+.student-card2:hover {
+    transform: scale(1.1);
+}
+.student-card3:hover {
+    transform: scale(1.1);
+}
+.student-card4:hover {
+    transform: scale(1.1);
+}
+.student-card5:hover {
+    transform: scale(1.1);
+}
+.alexi{
+    margin-top: 70px;
+    color: #0000EE;
+    text-decoration: underline;
+}

@@ -1,3 +1,4 @@
+
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
@@ -31,16 +32,12 @@ toggleBtn.addEventListener('click', () => {
         document.body.style.backgroundColor = "#081826";
         document.body.style.color = "#ffffff";
         
-        document.querySelector('.propos').style.backgroundColor = "#073A59";
+        document.querySelector('.semaine1').style.backgroundColor = "#073A59";
         document.querySelector('h1.mes-passions').style.backgroundColor = "#073A59";
         document.querySelector('h1.mes-projets').style.backgroundColor = "#073A59";
         document.querySelector('.cs').style.backgroundColor = "#073A59";
-        document.querySelector('.retour').style.backgroundColor = "#049DD9";
         document.querySelectorAll('.card').forEach(card => {
             card.style.backgroundColor = "#073A59";
-            });
-        document.querySelectorAll('.Bouton').forEach(Bouton => {
-            Bouton.style.backgroundColor = "#049DD9";
         });
         
         // On change la couleur de chaque lien trouvé
@@ -53,22 +50,17 @@ toggleBtn.addEventListener('click', () => {
         document.body.style.backgroundColor = "#ffffff";
         document.body.style.color = "#000000";
         
-        document.querySelector('.propos').style.backgroundColor = "#EE2449";
+        document.querySelector('.semaine1').style.backgroundColor = "#EE2449";
         document.querySelector('h1.mes-passions').style.backgroundColor = "#EE2449";
         document.querySelector('h1.mes-projets').style.backgroundColor = "#EE2449";
         document.querySelector('.cs').style.backgroundColor = "#EE2449";
-        document.querySelector('.retour').style.backgroundColor = "#A92831";
         document.querySelectorAll('.card').forEach(card => {
             card.style.backgroundColor = "#EE2449";
-        });     
-        document.querySelectorAll('.Bouton').forEach(Bouton => {
-            Bouton.style.backgroundColor = "#A92831";
         });
-        
         
         // On change la couleur de chaque lien trouvé
         tousLesLiens.forEach(lien => {
-            lien.style.color = "#000000";
+            lien.style.color = "#073A59";
         });
     }
 });
