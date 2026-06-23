@@ -1,0 +1,223 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color:#f8f9fc;
+    color:#1c1c1c;
+    line-height:1.6;
+}
+
+/* HEADER */
+.hero{
+    background: linear-gradient(135deg, #0057b8, #1e88e5);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    color:#ffe066;
+    margin-bottom:25px;
+}
+
+.retour a{
+    text-decoration:none;
+    color:#0057b8;
+    background:#ffd60a;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.retour a:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* PRESENTATION */
+.presentation{
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.propos{
+    background:white;
+    padding:30px;
+    border-left:8px solid #ffd60a;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.propos h2{
+    color:#0057b8;
+    margin-bottom:15px;
+}
+
+.cs{
+    text-align:center;
+    margin-top:30px;
+}
+
+.cs a{
+    text-decoration:none;
+    background:#0057b8;
+    color:white;
+    padding:12px 25px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.cs a:hover{
+    background:#ffd60a;
+    color:#0057b8;
+}
+
+/* TITRES */
+.mes-passions,
+.mes-projets{
+    text-align:center;
+    color:#0057b8;
+    font-size:2.3rem;
+    margin-bottom:40px;
+    position:relative;
+}
+
+.mes-passions::after,
+.mes-projets::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:4px;
+    background:#ffd60a;
+    margin:10px auto;
+}
+
+/* SECTION */
+.portfolio-section{
+    padding:50px 20px;
+}
+
+/* CARTES */
+.cards-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#0057b8;
+    margin:15px 0;
+}
+
+.card p{
+    padding:0 15px;
+}
+
+.hidden{
+    color:#444;
+}
+
+/* PETITE BARRE JAUNE EN BAS */
+.fleche_bas{
+    width:60px;
+    height:5px;
+    background:#ffd60a;
+    margin:15px auto 0;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#0057b8;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin-top:50px;
+}
+
+footer img{
+    width:90px;
+    margin-left:10px;
+    vertical-align:middle;
+}
+
+.conteneur-bouton{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.Bouton a{
+    text-decoration:none;
+    background:#ffd60a;
+    color:#0057b8;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.Bouton a:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .conteneur-bouton{
+        flex-direction:column;
+        align-items:center;
+    }
+}
