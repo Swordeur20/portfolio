@@ -1,0 +1,55 @@
+header h1 {
+color: #f4410a;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 40px;
+text-align: center;
+}
+body {
+background-color: #12065f;
+}
+h2
+{color:#f4410a;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 25px;
+border: 20px;
+border-color: aqua;
+}
+h3
+{color:#f4410a;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;
+}
+h4
+{color:#f4410a;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 25px;}
+h5{
+color: #f4410a;
+font-family: Arial, Helvetica, sans-serif;  
+font-size: 25px;
+}
+h17
+{margin-left: 1117px;}
+h21{
+color:gold ;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h22{
+color: gold;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h23{
+color:gold;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h24{
+color: gold;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+h25{
+color: rgb(15, 152, 22);
+}
+h26{
+color: gold;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
