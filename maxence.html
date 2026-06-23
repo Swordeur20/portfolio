@@ -3,23 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Portfolio | Maxence</title>
+<title>Portfolio | Maxence</title>
 <link rel="stylesheet" href="style-maxence.css">
 </head>
 <body>
 <header class="header">
-    <a href="index.html" class="retour">← Retour à l'accueil</a>
+    <a href="index.html" class="retour">Retour a l'accueil</a>
 
     <nav>
         <ul class="menu">
-            <li><a href="#études">Études</a></li>
-            <li><a href="#business">Business</a></li>
-            <li><a href="#voiture">Voiture</a></li>
-            <li><a href="#musique">Musique</a></li>
-            <li><a href="#stage">Stage</a></li>
+            <li class="police">
+                <a href="#" id="theme-toggle">Mode sombre</a>
+            </li>
+            <li class="police"><a href="#maxence">Maxence</a></li>
+            <li class="police"><a href="#passion">Passion</a></li>
+            <li class="police"><a href="#stage">Stage</a></li>
         </ul>
-</nav>
+    </nav>
 </header>
+
+<script>
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        toggle.textContent = "Mode clair";
+    } else {
+        toggle.textContent = "Mode sombre";
+    }
+});
+</script>
+
+
 <main>
 <div class="conteneur">
 
@@ -39,9 +58,9 @@
     </section>
 
 
-    <section class="bloc-title"><h1 class="center"> Maxence </h1></section>
+    <section class="bloc-title" id="maxence"><h1 class="center"> Maxence </h1></section>
     
-    <section class="bloc" id="études">
+    <section class="bloc">
 
         <div class="texte">
 
@@ -50,8 +69,10 @@
             </h2>
 
             <p class="orange">
-                Je m'appelle maxence, je sui en classe de 2nd à l'Institutde genech à Genech.
+                <strong>
+                Je m'appelle maxence, je suis en classe de 2nd à l'Institutde genech à Genech.
                Passant en première, j'ai pris les spés suivantes :
+               
             </p>
 
             <ul class="orange">
@@ -63,7 +84,7 @@
                 <li> nsi</li>
 
             </ul>
-
+            </strong>
         </div>
 
             <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.institutdegenech.fr%2Fwp-content%2Fuploads%2Flogo_IG-1536x1119.png&f=1&nofb=1&ipt=3bbf39f0da61b0f4ee9df358c2cabfac2982147c045622102b6396749879cbcc" alt="Billet">
@@ -71,7 +92,7 @@
 
         </section>
 
-    <section class="bloc" id="business">
+    <section class="bloc">
 
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fensemble-de-billets-euros-sur-fond-noir-un-paquet-se-trouve-227251818.jpg&f=1&nofb=1&ipt=39980d8bfc2785cb853e15b1ff06db0a445a99764cf5cdbd4eeb1eba3b82a372" alt="Billet">
 
@@ -80,10 +101,10 @@
             <h2>
                 Business
            </h2>
-           <p class="orange">
+           <p class="orange"><strong>
                Je travaille actuellement sur mon saas VinFinder. 
                VinFinder est un bot vinted qui devient une obligation pour les gens qui 
-               voudrais faire de l'achat revente plus rapidement avec de meilleurs profits.
+               voudrais faire de l'achat revente plus rapidement avec de meilleurs profits.</strong>
            </p>
 
         </div>
@@ -91,13 +112,15 @@
     </section>
 
 
-    <section class="bloc" id="voiture">
+    <section class="bloc-title" id="passion"><h1 class="center"> Passion </h1></section>
+
+    <section class="bloc">
         <div class="texte">
             <h2>Voiture</h2>
-            <p class="orange">
+            <p class="orange"><strong>
                 La McLaren 720S est une voiture de sport haut de gamme réputée pour sa vitesse 
                 impressionnante et son moteur puissant. Son design aérodynamique et ses performances 
-                en font l'un des modèles les plus emblématiques de la marque McLaren.
+                en font l'un des modèles les plus emblématiques de la marque McLaren.</strong>
 
             </p>
         </div>
@@ -106,36 +129,54 @@
     </section>
 
 
-    <section class="bloc" id="musique">
+    <section class="bloc">
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdropinblog.net%2Fcdn-cgi%2Fimage%2Ffit%3Dscale-down%2Cwidth%3D700%2F34259067%2Ffiles%2Ffrench-rapper-werenoi-2.jpg&f=1&nofb=1&ipt=be1074102ef572a70ff2350fea1234a147eb1b56d447a165b98cbbc8620658bd" alt="Billet">
 
     <div class="texte">
         <h2>Rap</h2>
-        <p class="orange">
+        <p class="orange"><strong>
             Werenoi est un rappeur français qui s'est imposé comme 
             l'une des figures importantes du rap actuel. Grâce à ses textes 
             authentiques et à ses nombreux succès, il a rapidement gagné une grande 
-            popularité auprès du public.
+            popularité auprès du public.</strong>
 
         </p>
     </div>
     </section>
 
 
-    <section class="bloc" id="Jeu video">
+    <section class="bloc">
         <div class="texte">
             <h2>Jeu video</h2>
             <p class="orange">
-                <strong>No, I'm Not a Human</strong> est un jeu vidéo d'horreur psychologique 
+                <strong>No, I'm Not a Human est un jeu vidéo d'horreur psychologique 
                 et de réflexion dans lequel le joueur doit survivre dans un monde inquiétant 
                 où il devient difficile de distinguer les humains des imposteurs. Grâce à son 
                 ambiance oppressante et ses choix décisifs, le jeu plonge le joueur dans une expérience 
-                pleine de suspense et de mystère.
+                pleine de suspense et de mystère.</strong>
 
             </p>
         </div>
 
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgaming-cdn.com%2Fimages%2Fproducts%2F19144%2Forig%2Fno-i-m-not-a-human-pc-game-steam-cover.jpg%3Fv%3D1744637227&f=1&nofb=1&ipt=1f4753bd772cbdf5b9d87ef72fad5fae1cbb9f5cdfa9476e05440aee1d52ce15" alt="No, I'm not a Human">
+    </section>
+
+
+    <section class="bloc">
+    <video autoplay muted width="300">
+	    <source src="/video/videoteeqzy.mp4" type="video/mp4"/>
+	        Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+    </video>
+
+    <div class="texte">
+        <h2>Fortnite prime</h2>
+        <p class="orange"><strong>
+            Le Prime Fortnite, c'est l'époque où des créateurs comme Teeqzy, LeBouseuh, tk78 et d'autres faisaient exploser la scène Fortnite en France.
+            Entre les tournois, les vidéos et les événements comme la PGW, cette période a marqué toute une génération de joueurs.
+            Pour beaucoup, le « Prime Fortnite » correspond aux années 2018-2020, considérées comme l'âge d'or du jeu.</strong>
+
+        </p>
+    </div>
     </section>
 
 
@@ -152,9 +193,9 @@
 
     <section class="bloc" >
         <div class="texte">
-            <h2>PokéPoireau</h2>
-            <p class="orange">
-                Nous avons fais une activité sur l'ia. Pour cela nous avions été sur le site leek wars.
+            <h2>Poke Poireau</h2>
+            <p class="orange"><strong>
+                Nous avons fais une activité sur l'ia. Pour cela nous avions été sur le site leek wars.</strong>
             </p>
         </div>
 
@@ -166,8 +207,8 @@
 
     <div class="texte">
         <h2> Arduino </h2>
-        <p class="orange">
-            Nous avons fais de l'arduino, nous avons essayer de refaire le célébre jeux simon avec des leds
+        <p class="orange"><strong>
+            Nous avons fais de l'arduino, nous avons essayer de refaire le célébre jeux simon avec des leds</strong>
         </p>
     </div>
     </section>
@@ -176,10 +217,10 @@
         <div class="texte">
             <h2>Conferences</h2>
             
-            <p class="orange">
+            <p class="orange"><strong>
                 Nous avons eu de nombreuses conférences pendant ce stage les plus marquante 
                 pour moi ont été celle sur l'ia mais celle de la cyber sécurité l'était encore 
-                plus car l'intervenant avais fais de la pratique qui était vraiment intéréssante
+                plus car l'intervenant avais fais de la pratique qui était vraiment intéréssante</strong>
             </p>
         </div>
 
