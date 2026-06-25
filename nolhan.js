@@ -50,19 +50,19 @@ toggleBtn.addEventListener('click', () => {
 
     } else {
         // --- MODE JOUR ---
-        document.body.style.backgroundColor = "#ffffff";
+        document.body.style.backgroundColor = "#5773FF";
         document.body.style.color = "#000000";
         
-        document.querySelector('.propos').style.backgroundColor = "#EE2449";
-        document.querySelector('h1.mes-passions').style.backgroundColor = "#EE2449";
-        document.querySelector('h1.mes-projets').style.backgroundColor = "#EE2449";
-        document.querySelector('.cs').style.backgroundColor = "#EE2449";
-        document.querySelector('.retour').style.backgroundColor = "#A92831";
+        document.querySelector('.propos').style.backgroundColor = "#6A81F0";
+        document.querySelector('h1.mes-passions').style.backgroundColor = "#6A81F0";
+        document.querySelector('h1.mes-projets').style.backgroundColor = "#6A81F0";
+        document.querySelector('.cs').style.backgroundColor = "#6A81F0";
+        document.querySelector('.retour').style.backgroundColor = "#CBE2FE";
         document.querySelectorAll('.card').forEach(card => {
-            card.style.backgroundColor = "#EE2449";
+            card.style.backgroundColor = "#6A81F0";
         });     
         document.querySelectorAll('.Bouton').forEach(Bouton => {
-            Bouton.style.backgroundColor = "#A92831";
+            Bouton.style.backgroundColor = "#CBE2FE";
         });
         
         

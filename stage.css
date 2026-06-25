@@ -2,6 +2,8 @@ header h1 {
     text-align: center;
     font-size: 50px;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
 a { 
     color: #ffffff;
@@ -95,9 +97,17 @@ div.retour {
     text-align: center;
     margin-top: 40px;
 }
+.contenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 400px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
 .semaine1{
     border-radius: 10px;
-    width: 30%;
+    width: 500px;
     background-color: #073A59;
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     min-height: 500px;
@@ -106,14 +116,24 @@ div.retour {
 }
 .semaine2{
     border-radius: 10px;
-    width: 30%;
+    width: 500px;
     background-color: #073A59;
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
     min-height: 500px;
     height: auto;
     padding: 20px;
 }
-
+.ressentie{
+    border-radius: 10px;
+    width: 30%;
+    background-color: #073A59;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    min-height: 500px;
+    height: auto;
+    padding: 30px;
+    font-size: 20px;
+    text-align: left;
+}
 
 .card{
     max-width: none;
@@ -157,4 +177,6 @@ div.retour {
 body{
     background-color: #081826;
     color: #ffffff;
+    font-family: 'FiraCode', sans-serif;
+    src: url(/fonts/FiraCode-VariableFont_wght.ttf);
 }
