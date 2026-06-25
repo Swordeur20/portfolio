@@ -97,8 +97,14 @@ main{
     display: flex;
     flex-direction: column;
     transition: width 1s ease, height 1s ease;
-
-}.student-card3{
+    font-family: 'FiraCode', sans-serif;
+    src: url(/fonts/FiraCode-VariableFont_wght.ttf);
+}
+.student-card2 h3{
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+}
+.student-card3{
     border-radius: 10px;
     border-color: black;
     border: solid;
@@ -158,6 +164,8 @@ main{
     background-position: center;
     color: white;
     transition: width 1s ease, height 1s ease;
+    font-family: "moderniz";
+    src: url("fonts/Moderniz.otf");
 }
 footer{
     position: fixed;
