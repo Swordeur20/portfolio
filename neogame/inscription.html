@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription – NeoGames</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; font-family: 'Inter', sans-serif; background: #050816; color: #f5f7ff; }
+        header {
+            padding: 16px 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 8, 22, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+        }
+        .logo { font-family: 'Orbitron', sans-serif; }
+        nav a { color: #9aa0c2; margin-left: 16px; text-decoration: none; font-size: 0.9rem; }
+        nav a:hover { color: #00f5ff; }
+        main { padding: 32px 8vw 40px; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; color: #00f5ff; }
+        form {
+            background: #11172b;
+            padding: 24px;
+            border-radius: 14px;
+            max-width: 420px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 245, 255, 0.15);
+        }
+        label {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: none;
+            background: #0b1020;
+            color: #f5f7ff;
+        }
+        button {
+            margin-top: 18px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #00f5ff, #4b7fff);
+            color: #02030a;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">NeoGames</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="action.html">Action / FPS</a>
+        <a href="rpg.html">RPG</a>
+        <a href="openworld.html">Monde Ouvert</a>
+        <a href="sport.html">Sport</a>
+        <a href="strategie.html">Stratégie</a>
+        <a href="inde.html">Indé</a>
+        <a href="temoignages.html">Témoignages</a>
+        <a href="inscription.html">Inscription</a>
+    </nav>
+</header>
+
+<main>
+    <h1>🧬 Crée ton compte NeoGames</h1>
+    <p>Rejoins la communauté futuriste des passionnés de jeux vidéo.</p>
+
+    <form>
+        <label>Nom d'utilisateur</label>
+        <input type="text" placeholder="Ton pseudo" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="exemple@mail.com" required>
+
+        <label>Mot de passe</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <label>Confirmer le mot de passe</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <button type="submit">Créer mon compte</button>
+    </form>
+</main>
+
+</body>
+</html>

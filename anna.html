@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ============================================================
+         🏷️ TITRE DE L’ONGLET (DEMANDÉ)
+         ============================================================ -->
+    <title>Mon portfolio BIEKRE</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- STYLE GLOBAL (structure conservée) --- */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 20% 20%, #0a0f2d, #050816 70%);
+            color: #e8ecff;
+            overflow-x: hidden;
+            transition: 0.4s; /* Pour le mode jour/nuit */
+        }
+
+        /* MODE JOUR (ajouté mais structure intacte) */
+        body.light {
+            background: #f7f7f7;
+            color: #222;
+        }
+
+        /* --- HEADER (structure conservée) --- */
+        header {
+            padding: 16px 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 8, 22, 0.75);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 245, 255, 0.15);
+        }
+
+        /* LOGO (remplacé par ton titre demandé) */
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: #ff4b9a; /* rose froncé */
+            letter-spacing: 2px;
+        }
+
+        /* BOUTON JOUR/NUIT (ajouté) */
+        #modeBtn {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid #ff4b9a;
+            background: transparent;
+            color: #ff4b9a;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: #9aa0c2;
+            margin-left: 16px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: #00f5ff;
+        }
+
+        /* --- TITRES (structure conservée) --- */
+        main {
+            padding: 40px 8vw 60px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.6rem;
+            color: #ff4b9a; /* rose froncé */
+            text-shadow: 0 0 12px #ff4b9a;
+            margin-bottom: 10px;
+            text-align: center; /* demandé */
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.4rem;
+            color: #7ddfff;
+            border-left: 3px solid #ff4b9a;
+            padding-left: 10px;
+        }
+
+        /* --- CARTES (structure conservée) --- */
+        .card {
+            background: rgba(17, 23, 43, 0.85);
+            padding: 20px;
+            border-radius: 14px;
+            margin-top: 16px;
+            border: 1px solid rgba(255, 75, 154, 0.4);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #ff4b9a;
+        }
+
+        /* BOUTON RETOUR (ajouté) */
+        .retour {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid #ff4b9a;
+            color: #ff4b9a;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- ============================================================
+         🔥 TITRE DU SITE (DEMANDÉ)
+         ============================================================ -->
+    <div class="logo">Bienvenue dans le site d’Anne‑Eslie</div>
+
+    <!-- BOUTON JOUR/NUIT AJOUTÉ -->
+    <button id="modeBtn">🌙 / ☀️</button>
+
+    <!-- NAVIGATION (structure intacte) -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="#">Profil</a>
+        <a href="#">Compétences</a>
+        <a href="#">Liens</a>
+        <a href="#">Projets</a>
+        <a href="#">Galerie</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ============================================================
+         🎀 TITRE PRINCIPAL (remplace Jeux Indés)
+         ============================================================ -->
+    <h1>Mon Portfolio – BIEKRE</h1>
+
+    <!-- ============================================================
+         SECTION : À PROPOS DE MOI (remplace ton texte)
+         ============================================================ -->
+    <h2>À propos de moi</h2>
+    <div class="card">
+        <p>
+            J'aime lire des romans, des mangas, des webtoons et regarder des animés.<br>
+            J'aime l'économie, le business, l'histoire et un peu la politique.<br>
+            J'aime beaucoup courir.
+        </p>
+    </div>
+
+    <!-- ============================================================
+         SECTION : MES PASSIONS
+         ============================================================ -->
+    <h2>Mes passions</h2>
+    <div class="card">
+        <p>
+            Lecture, mangas, animés, sport, business, histoire, culture japonaise.
+        </p>
+    </div>
+
+    <!-- ============================================================
+         SECTION : MON PARCOURS
+         ============================================================ -->
+    <h2>Mon parcours</h2>
+    <div class="card">
+        <p>
+            Étudiante motivée, passionnée par l’apprentissage et le développement personnel.
+        </p>
+    </div>
+
+    <!-- ============================================================
+         SECTION : MES PROJETS
+         ============================================================ -->
+    <h2>Mes projets</h2>
+    <div class="card">
+        <p>
+            Construire un portfolio, développer mes compétences, réussir mes études.
+        </p>
+    </div>
+
+    <!-- ============================================================
+         SECTION : GALERIE
+         ============================================================ -->
+    <h2>Galerie</h2>
+    <div class="card">
+        <p>Tu pourras ajouter tes images ici.</p>
+    </div>
+
+    <!-- ============================================================
+         SECTION : CV FUTURISTE
+         ============================================================ -->
+    <h2>CV futuriste</h2>
+    <div class="card">
+        <p>
+            Nom : Anne‑Eslie BIEKRE<br>
+            Compétences : créativité, organisation, curiosité<br>
+            Objectif : réussir mes études
+        </p>
+    </div>
+
+    <!-- ============================================================
+         BOUTON RETOUR À L’ACCUEIL (DEMANDÉ)
+         ============================================================ -->
+    <a href="index.html" class="retour">← Retour à l’accueil</a>
+
+</main>
+
+<footer>
+    <!-- ============================================================
+         FOOTER DEMANDÉ
+         ============================================================ -->
+    <p>© 2026 - BIEKRE | Fait avec passion</p>
+</footer>
+
+<script>
+    /* ============================================================
+       🌗 SCRIPT : MODE JOUR / NUIT (ajouté)
+       ============================================================ */
+    document.getElementById("modeBtn").addEventListener("click", function() {
+        document.body.classList.toggle("light");
+    });
+</script>
+
+</body>
+</html>

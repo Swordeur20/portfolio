@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     🏷️ TITRE DE L’ONGLET DU NAVIGATEUR
+     ============================================================ -->
+<title>Mon Portfolio - BIEKRE</title>
+
+<link rel="stylesheet" href="anneeslie.css">
+
+<style>
+/* ============================================================
+   🎨 STYLE FUTURISTE / MANGA / GAMER
+   ============================================================ */
+
+/* --- VARIABLES POUR MODE JOUR/NUIT --- */
+:root {
+    --bg-color: radial-gradient(circle at 20% 0%, #1b0b3a, #050816 70%);
+    --text-color: #f5f7ff;
+    --card-bg: rgba(17, 23, 43, 0.85);
+    --border-color: rgba(0, 245, 255, 0.2);
+}
+
+/* MODE JOUR (activé par JS) */
+.light-mode {
+    --bg-color: #f7f7f7;
+    --text-color: #222;
+    --card-bg: #ffffff;
+    --border-color: #ff4b9a;
+}
+
+/* --- STYLE GLOBAL --- */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.4s;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(5, 8, 22, 0.85);
+    border-bottom: 1px solid rgba(0, 245, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Titre principal futuriste */
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00f5ff;
+    text-shadow: 0 0 12px #00f5ff;
+}
+
+/* Lien retour */
+header a {
+    color: #ff4b9a;
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover {
+    text-shadow: 0 0 8px #ff4b9a;
+}
+
+/* --- BOUTON JOUR/NUIT --- */
+#modeBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid #00f5ff;
+    background: transparent;
+    color: #00f5ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#modeBtn:hover {
+    background: rgba(0, 245, 255, 0.2);
+}
+
+/* --- CONTENU PRINCIPAL --- */
+main {
+    padding: 30px 10vw;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Titres des sections */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #7ddfff;
+    border-left: 3px solid #ff4b9a;
+    padding-left: 10px;
+}
+
+/* Cartes futuristes */
+section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+    margin-top: 30px;
+}
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px rgba(0, 245, 255, 0.25);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(5, 8, 22, 0.9);
+    border-top: 1px solid rgba(0, 245, 255, 0.2);
+    font-size: 0.9rem;
+    color: #9aa0c2;
+}
+
+/* --- ANIMATION D’APPARITION --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================================================
+     🧭 HEADER : TITRE PRINCIPAL DU SITE
+     ============================================================ -->
+<header>
+    <h1>Bienvenue sur le site de Anne‑Eslie BIEKRE</h1>
+
+    <!-- 🔘 BOUTON JOUR/NUIT -->
+    <button id="modeBtn">Mode Jour/Nuit</button>
+
+    <!-- Lien retour vers l'accueil -->
+    <p><a href="index.html">← Retour à l'accueil</a></p>
+</header>
+
+<main>
+
+<!-- ============================================================
+     ⭐ SECTION 1 : MES CENTRES D’INTÉRÊT
+     ============================================================ -->
+<section>
+    <h2>Mes centres d’intérêt</h2>
+
+    <p>
+        J'aime lire des romans, des mangas, des webtoons et regarder des animés.<br>
+        J'aime l'économie, le business, l'histoire et un peu la politique.<br>
+        J'aime beaucoup courir.
+    </p>
+</section>
+
+<!-- ============================================================
+     ⭐ SECTION 2 : MES PASSIONS
+     ============================================================ -->
+<section>
+    <h2>Mes passions</h2>
+
+    <p>
+        • Lecture (mangas, romans, webtoons)<br>
+        • Culture japonaise et animés<br>
+        • Sport : course, cardio<br>
+        • Business, économie, entrepreneuriat<br>
+        • Histoire et compréhension du monde
+    </p>
+</section>
+
+<!-- ============================================================
+     ⭐ SECTION 3 : MON PARCOURS
+     ============================================================ -->
+<section>
+    <h2>Mon parcours</h2>
+
+    <p>
+        • Étudiante motivée et curieuse<br>
+        • Passionnée par l’apprentissage<br>
+        • Développement personnel<br>
+        • Objectif : réussir dans un domaine qui me passionne
+    </p>
+</section>
+
+<!-- ============================================================
+     ⭐ SECTION 4 : MES PROJETS
+     ============================================================ -->
+<section>
+    <h2>Mes projets</h2>
+
+    <p>
+        • Créer un portfolio professionnel<br>
+        • Développer mes compétences numériques<br>
+        • Construire un avenir dans le business ou la communication<br>
+        • Continuer à apprendre et progresser
+    </p>
+</section>
+
+<!-- ============================================================
+     ⭐ SECTION 5 : GALERIE
+     ============================================================ -->
+<section>
+    <h2>Galerie</h2>
+
+    <p>
+        Ici tu pourras ajouter :<br>
+        • des images<br>
+        • des dessins<br>
+        • des photos<br>
+        • des créations personnelles<br>
+        (Tu pourras les insérer plus tard)
+    </p>
+</section>
+
+<!-- ============================================================
+     ⭐ SECTION 6 : CV FUTURISTE
+     ============================================================ -->
+<section>
+    <h2>CV futuriste</h2>
+
+    <p>
+        • Nom : Anne‑Eslie BIEKRE<br>
+        • Profil : étudiante ambitieuse<br>
+        • Compétences : organisation, créativité, curiosité<br>
+        • Objectifs : réussir mes études et construire mon avenir
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 - BIEKRE | Fait avec passion</p>
+</footer>
+
+<script>
+/* ============================================================
+   🌗 SCRIPT : MODE JOUR / NUIT
+   ============================================================ */
+
+document.getElementById("modeBtn").addEventListener("click", function() {
+    document.body.classList.toggle("light-mode");
+});
+</script>
+
+</body>
+</html>

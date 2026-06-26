@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>L'Univers des jeux vidéo</div></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #050816;
+            --accent: #00f5ff;
+            --accent-soft: rgba(0, 245, 255, 0.15);
+            --text: #f5f7ff;
+            --muted: #9aa0c2;
+            --card: #11172b;
+        }
+
+        *{ box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #1b2a4a 0, #050816 45%, #02030a 100%);
+            color: var(--text);
+        }
+
+        header {
+            padding: 16px 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 8, 22, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #1fcde4;
+            
+        }
+        .logo span {
+            font-weight: bold;          /* mettre en gras */
+            color: #95c2ec;            /* couleur différente */
+            color: #95c2ec;            /* couleur différente */
+            text-shadow: 0 0 8px ; /* effet futuriste optionnel */
+            font-size: 2.5rem;
+        }
+
+
+
+        nav a {
+            color: var(--muted);
+            margin-left: 16px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        nav a:hover { color: var(--accent); }
+
+        main { padding: 32px 8vw 40px; }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 32px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+        }
+        .hero-title span { color: var(--accent); }
+
+        .hero-sub {
+            margin-top: 10px;
+            color: var(--muted);
+            max-width: 520px;
+        }
+
+        .hero-cta {
+            margin-top: 20px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #4b7fff);
+            color: #02030a;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent-soft);
+        }
+
+        .hero-visual {
+            height: 230px;
+            border-radius: 20px;
+            background: radial-gradient(circle at top, #283b70 0, #050816 55%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .chip {
+            position: absolute;
+            border-radius: 14px;
+            padding: 8px 12px;
+            background: rgba(5, 8, 22, 0.9);
+            border: 1px solid var(--accent-soft);
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+        .chip strong { color: var(--accent); }
+        .chip-1 { top: 16px; left: 16px; }
+        .chip-2 { bottom: 18px; left: 18px; }
+        .chip-3 { top: 40px; right: 16px; }
+
+        .ring {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 245, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+            animation: spin 18s linear infinite;
+        }
+        .ring-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff3366;
+            box-shadow: 0 0 18px rgba(255, 51, 102, 0.9);
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h2.section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .section-sub {
+            color: var(--muted);
+            font-size: 0.9rem;
+            max-width: 620px;
+        }
+
+        .type-grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .type-card {
+            background: var(--card);
+            padding: 16px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+        }
+        .type-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+            border-color: var(--accent-soft);
+        }
+        .type-card h3 { margin: 0 0 4px; }
+        .type-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .filter-bar {
+            margin-top: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-chip {
+            border-radius: 999px;
+            padding: 7px 14px;
+            border: 1px solid var(--accent-soft);
+            background: rgba(5, 8, 22, 0.7);
+            font-size: 0.8rem;
+            color: var(--muted);
+            cursor: pointer;
+        }
+        .filter-chip.active {
+            background: var(--accent);
+            color: #02030a;
+            border-color: transparent;
+        }
+
+        .games-grid {
+            margin-top: 22px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .game-card {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+            border-color: var(--accent-soft);
+        }
+
+        .game-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .game-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .game-meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .game-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 0.7rem;
+        }
+        .pill {
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--muted);
+        }
+        .pill.accent {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+        }
+        .modal {
+            width: min(420px, 92vw);
+            background: #050816;
+            border-radius: 18px;
+            border: 1px solid var(--accent-soft);
+            padding: 18px;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .modal-title { font-weight: 600; }
+        .modal-close {
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .modal-genre {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .modal-text {
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .modal-meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+        .modal-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 800px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><span>~</span>NeoGames<span>~</span></div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="action.html">Action / FPS</a>
+        <a href="rpg.html">RPG</a>
+        <a href="openworld.html">Monde Ouvert</a>
+        <a href="sport.html">Sport</a>
+        <a href="strategie.html">Stratégie</a>
+        <a href="inde.html">Indé</a>
+        <a href="inscription.html">Inscription</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div>
+            <h1 class="hero-title">Explore l’univers <span>des jeux vidéo</span> comme un pro.</h1>
+            <p class="hero-sub">
+                Genres, histoires, dates clés, jeux iconiques et témoignages de fans. Un hub futuriste pour comprendre le monde du jeu vidéo.
+            </p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="scrollToSection('catalogue')">Voir les jeux</button>
+                <button class="btn btn-ghost" onclick="scrollToSection('types')">Comprendre les genres</button>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="ring"><div class="ring-dot"></div></div>
+            <div class="chip chip-1">🎮 <strong>Genres expliqués</strong></div>
+            <div class="chip chip-2">🌐 PC · Console · Mobile</div>
+            <div class="chip chip-3">⚡ Futur du gaming</div>
+        </div>
+    </section>
+
+    <section id="types">
+        <h2 class="section-title">Les grands types de jeux vidéo</h2>
+        <p class="section-sub">
+            Clique sur un type pour ouvrir une page dédiée : histoire, dates importantes, créateurs, jeux iconiques.
+        </p>
+
+        <div class="type-grid">
+            <article class="type-card" onclick="location.href='action.html'">
+                <h3>Action / FPS</h3>
+                <p>Réflexes, précision, adrénaline. Doom, Call of Duty, Valorant…</p>
+            </article>
+
+            <article class="type-card" onclick="location.href='rpg.html'">
+                <h3>RPG</h3>
+                <p>Progression, histoire, choix. Final Fantasy, The Witcher, Elden Ring…</p>
+            </article>
+
+            <article class="type-card" onclick="location.href='openworld.html'">
+                <h3>Monde Ouvert</h3>
+                <p>Exploration libre. GTA, Zelda BOTW, Red Dead Redemption…</p>
+            </article>
+
+            <article class="type-card" onclick="location.href='sport.html'">
+                <h3>Sport / Course</h3>
+                <p>Compétition, réalisme, vitesse. EA Sports FC, Rocket League, Forza…</p>
+            </article>
+
+            <article class="type-card" onclick="location.href='strategie.html'">
+                <h3>Stratégie</h3>
+                <p>Gestion, réflexion, tactique. Age of Empires, Civilization…</p>
+            </article>
+
+            <article class="type-card" onclick="location.href='inde.html'">
+                <h3>Jeux Indés</h3>
+                <p>Créativité, innovation. Hades, Hollow Knight, Celeste…</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="catalogue">
+        <h2 class="section-title">Catalogue interactif</h2>
+        <p class="section-sub">
+            Filtre par genre et clique sur un jeu pour voir une description détaillée.
+        </p>
+
+        <div class="filter-bar">
+            <button class="filter-chip active" data-filter="all">Tous</button>
+            <button class="filter-chip" data-filter="action">Action / FPS</button>
+            <button class="filter-chip" data-filter="rpg">RPG</button>
+            <button class="filter-chip" data-filter="openworld">Monde ouvert</button>
+            <button class="filter-chip" data-filter="sport">Sport</button>
+            <button class="filter-chip" data-filter="strategie">Stratégie</button>
+            <button class="filter-chip" data-filter="inde">Indé</button>
+        </div>
+
+        <div class="games-grid" id="gamesGrid"></div>
+    </section>
+</main>
+
+<div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title" id="modalTitle"></div>
+            <button class="modal-close" onclick="closeModal()">✕</button>
+        </div>
+        <div class="modal-genre" id="modalGenre"></div>
+        <div class="modal-text" id="modalDescription"></div>
+        <div class="modal-meta" id="modalPlatforms"></div>
+        <div class="modal-meta" id="modalPlayers"></div>
+        <div class="modal-pills" id="modalTags"></div>
+    </div>
+</div>
+
+<script>
+    const games = [
+        {
+            id: 1,
+            title: "Call of Duty: Modern Warfare II",
+            genreKey: "action",
+            genreLabel: "Action / FPS",
+            short: "FPS nerveux, multijoueur compétitif et modes coop.",
+            description:
+                "Call of Duty: Modern Warfare II est un FPS moderne très dynamique. " +
+                "Campagne scénarisée, multijoueur compétitif et modes coopératifs en font une référence du genre.",
+            platforms: "PC, PlayStation, Xbox",
+            players: "Solo (campagne) + Multijoueur en ligne",
+            tags: ["FPS", "Compétitif", "Esport"]
+        },
+        {
+            id: 2,
+            title: "Valorant",
+            genreKey: "action",
+            genreLabel: "Action / FPS tactique",
+            short: "FPS 5v5 très stratégique avec pouvoirs et rôles.",
+            description:
+                "Valorant est un FPS tactique en 5v5. Chaque agent possède des capacités uniques qui complètent les armes. " +
+                "Le jeu demande précision, communication et stratégie d’équipe.",
+            platforms: "PC",
+            players: "Multijoueur uniquement (5v5)",
+            tags: ["FPS", "Tactique", "Esport"]
+        },
+        {
+            id: 3,
+            title: "The Witcher 3: Wild Hunt",
+            genreKey: "rpg",
+            genreLabel: "RPG / Monde ouvert",
+            short: "RPG narratif dans un vaste monde médiéval fantastique.",
+            description:
+                "The Witcher 3 est un RPG en monde ouvert où tu incarnes Geralt, un chasseur de monstres. " +
+                "Quêtes profondes, choix moraux et univers riche en font un jeu culte.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Solo",
+            tags: ["RPG", "Narratif", "Monde ouvert"]
+        },
+        {
+            id: 4,
+            title: "Elden Ring",
+            genreKey: "rpg",
+            genreLabel: "Action-RPG / Monde ouvert",
+            short: "Monde ouvert exigeant, combats difficiles et exploration libre.",
+            description:
+                "Elden Ring est un action-RPG réputé pour sa difficulté et son univers mystérieux. " +
+                "Tu explores un monde gigantesque, affrontes des boss impressionnants et construis ton personnage.",
+            platforms: "PC, PlayStation, Xbox",
+            players: "Solo + Coop en ligne",
+            tags: ["Difficile", "Exploration", "Boss"]
+        },
+        {
+            id: 5,
+            title: "The Legend of Zelda: Breath of the Wild",
+            genreKey: "openworld",
+            genreLabel: "Aventure / Monde ouvert",
+            short: "Exploration libre, énigmes et combats dans un monde poétique.",
+            description:
+                "Breath of the Wild propose un monde ouvert très libre. Tu peux grimper, cuisiner, résoudre des énigmes " +
+                "et affronter des ennemis comme tu veux. La curiosité est toujours récompensée.",
+            platforms: "Nintendo Switch",
+            players: "Solo",
+            tags: ["Exploration", "Énigmes", "Aventure"]
+        },
+        {
+            id: 6,
+            title: "EA Sports FC",
+            genreKey: "sport",
+            genreLabel: "Sport / Football",
+            short: "Simulation de football, solo ou en ligne.",
+            description:
+                "EA Sports FC est la grande licence de football. Clubs réels, modes compétitifs et jeu en ligne " +
+                "en font un pilier des jeux de sport.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Solo, local, en ligne",
+            tags: ["Football", "Compétitif", "Multijoueur"]
+        },
+        {
+            id: 7,
+            title: "Rocket League",
+            genreKey: "sport",
+            genreLabel: "Sport / Arcade",
+            short: "Matchs de foot avec des voitures propulsées par des fusées.",
+            description:
+                "Rocket League mélange football et voitures boostées. Les matchs sont rapides, fun et spectaculaires. " +
+                "Facile à comprendre, difficile à maîtriser.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Local + Multijoueur en ligne",
+            tags: ["Arcade", "Rapide", "Esport"]
+        },
+        {
+            id: 8,
+            title: "Civilization VI",
+            genreKey: "strategie",
+            genreLabel: "Stratégie / Tour par tour",
+            short: "Construis une civilisation et mène-la à la victoire.",
+            description:
+                "Dans Civilization VI, tu choisis un peuple et le fais évoluer à travers les âges. " +
+                "Tu gères science, culture, diplomatie et armée pour dominer le monde.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Solo + Multijoueur en ligne",
+            tags: ["Stratégie", "Gestion", "Tour par tour"]
+        },
+        {
+            id: 9,
+            title: "Hades",
+            genreKey: "inde",
+            genreLabel: "Rogue-like / Indé",
+            short: "Action rapide avec progression à chaque tentative.",
+            description:
+                "Hades est un jeu d’action indé où tu t’échappes des Enfers. Chaque run est différent, " +
+                "tu débloques des améliorations et découvres l’histoire au fil des essais.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Solo",
+            tags: ["Indé", "Action", "Rogue-like"]
+        },
+        {
+            id: 10,
+            title: "Hollow Knight",
+            genreKey: "inde",
+            genreLabel: "Metroidvania / Indé",
+            short: "Exploration 2D, combats précis et ambiance sombre.",
+            description:
+                "Hollow Knight est un jeu d’exploration 2D avec un univers mystérieux et des combats exigeants. " +
+                "Tu débloques de nouvelles capacités pour accéder à de nouvelles zones.",
+            platforms: "PC, PlayStation, Xbox, Nintendo Switch",
+            players: "Solo",
+            tags: ["Indé", "Exploration", "Difficile"]
+        }
+    ];
+
+    const gamesGrid = document.getElementById("gamesGrid");
+    const filterChips = document.querySelectorAll(".filter-chip");
+    const modalBackdrop = document.getElementById("modalBackdrop");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalGenre = document.getElementById("modalGenre");
+    const modalDescription = document.getElementById("modalDescription");
+    const modalPlatforms = document.getElementById("modalPlatforms");
+    const modalPlayers = document.getElementById("modalPlayers");
+    const modalTags = document.getElementById("modalTags");
+
+    function renderGames(filter) {
+        const currentFilter = filter || "all";
+        gamesGrid.innerHTML = "";
+        const filtered = games.filter(function (game) {
+            return currentFilter === "all" || game.genreKey === currentFilter;
+        });
+
+        filtered.forEach(function (game) {
+            const card = document.createElement("article");
+            card.className = "game-card";
+            card.dataset.id = game.id;
+
+            card.innerHTML =
+                '<div class="game-tag">' + game.genreLabel + '</div>' +
+                '<div class="game-title">' + game.title + '</div>' +
+                '<div class="game-meta">' + game.short + '</div>' +
+                '<div class="game-pill-row">' +
+                    '<span class="pill accent">' + game.platforms.split(",")[0].trim() + '</span>' +
+                    '<span class="pill">' + game.players + '</span>' +
+                '</div>';
+
+            card.addEventListener("click", function () {
+                openModal(game.id);
+            });
+
+            gamesGrid.appendChild(card);
+        });
+    }
+
+    function openModal(id) {
+        const game = games.find(function (g) { return g.id === id; });
+        if (!game) return;
+
+        modalTitle.textContent = game.title;
+        modalGenre.textContent = game.genreLabel;
+        modalDescription.textContent = game.description;
+        modalPlatforms.textContent = "Plateformes : " + game.platforms;
+        modalPlayers.textContent = "Joueurs : " + game.players;
+
+        modalTags.innerHTML = "";
+        game.tags.forEach(function (tag) {
+            const span = document.createElement("span");
+            span.className = "pill accent";
+            span.textContent = tag;
+            modalTags.appendChild(span);
+        });
+
+        modalBackdrop.style.display = "flex";
+    }
+
+    function closeModal() {
+        modalBackdrop.style.display = "none";
+    }
+
+    modalBackdrop.addEventListener("click", function (e) {
+        if (e.target === modalBackdrop) {
+            closeModal();
+        }
+    });
+
+    filterChips.forEach(function (chip) {
+        chip.addEventListener("click", function () {
+            filterChips.forEach(function (c) {
+                c.classList.remove("active");
+            });
+            chip.classList.add("active");
+            const filter = chip.getAttribute("data-filter");
+            renderGames(filter);
+        });
+    });
+
+    function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+    renderGames("all");
+</script>
+
+</body>
+</html>
