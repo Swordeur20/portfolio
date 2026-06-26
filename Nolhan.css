@@ -2,6 +2,8 @@ header h1 {
     text-align: center;
     font-size: 50px;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
 }
 a { 
     color: #ffffff;
@@ -209,6 +211,8 @@ main {
 body {
     background-color: #081826;
     color: white;
+    font-family: 'FiraCode', sans-serif;
+    src: url(/fonts/FiraCode-VariableFont_wght.ttf);
 
 }
 img {
