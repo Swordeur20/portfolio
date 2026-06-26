@@ -1,26 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Portfolio - Beaumont </title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Alexis Beaumont</title>
+    <link rel="stylesheet" href="Alexis.css">
 </head>
 <body>
-<header>
-<h1> Bienvenue sur le site de Alexis !</h1>
-<p><a href="index.html">← Retour à l'accueil</a></p>
--/header>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Bienvenue sur le site de Alexis Beaumont !</h1>
+        <p class="subtitle">
+            Lycéen • Développeur passionné • Stagiaire chez Epitech
+        </p>
+        <div class="retour">
+            <a href="index.html">← Retour à l'accueil</a>
+        </div>
+    </div>
+</header>
+
 <main>
----- Ta présentation --> je suis en seconde à biotech 
-<section>
-<h2>À propos de moi</h2>
-<p>j'aime le piano, les jeus vidéos et les animés</p>
-</section>
+    <section class="presentation">
+        <div class="propos">
+            <h2>À propos de moi</h2>
+            <p>
+                Je suis un élève de seconde au Lycée Biotech de Douai et je suis actuellement en stage chez Epitech.
+            </p>
+        </div>
+        <div class="cs">
+            <a href="Alexis-stage.html">Contenu du stage</a>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h2 class="mes-passions">Mes passions</h2>
+
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/Nolhan/develloppement.png" alt="Développement">
+                <h3>Développement</h3>
+                <p class="hidden">
+                    Je suis passionné par la programmation et la cybersécurité.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+
+            <div class="card">
+                <img src="https://static.wikia.nocookie.net/heros/images/7/7e/HollowVessel.png/revision/latest?cb=20210710153257&path-prefix=fr" alt="Hollow Knight">
+                <h3>Jeux vidéo</h3>
+                <p class="hidden">
+                    Passionné de jeux vidéo et d'univers immersifs.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/91Av5fsl6mL.jpg" alt="Manga">
+                <h3>Manga</h3>
+                <p class="hidden">
+                    Je suis un grand fan de mangas et d'animés.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h2 class="mes-projets">Mon avenir & Projets</h2>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3>Première</h3>
+                <p class="hidden">
+                    Première technologique (STI2D ou STL).
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+
+            <div class="card">
+                <h3>Terminale</h3>
+                <p class="hidden">
+                    Obtention du baccalauréat et spécialisation.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+
+            <div class="card">
+                <h3>Études supérieures</h3>
+                <p class="hidden">
+                    Epitech ? Une école d'informatique.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+
+            <div class="card">
+                <h3>Projet actuel</h3>
+                <p class="hidden">
+                    Mieux comprendre la cybersécurité et créer un jeu sur mon temps libre.
+                </p>
+                <div class="fleche_bas"></div>
+            </div>
+        </div>
+    </section>
 </main>
+
 <footer>
-<p>© 2026 - Beaumont | Fait avec passion</p>
+    <p>
+        © 2026 - Alexis Beaumont | Fait avec passion
+        <img src="images/Epitech_Official_Logo.png" alt="logo epitech">
+    </p>
+
+    <div class="conteneur-bouton">
+        <div class="Bouton">
+            <a href="https://wagnonville.fr/lycee-bio-tech-douai/" target="_blank">Mon lycée</a>
+        </div>
+        <div class="Bouton">
+            <a href="https://www.epitech.eu/" target="_blank">Epitech</a>
+        </div>
+    </div>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>

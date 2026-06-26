@@ -1,0 +1,81 @@
+body {
+    background-color: #0d0066; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffff00; 
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.header-site {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.header-site h1 {
+    color: #ff5500;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.lien-retour {
+    color: #8888ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.lien-retour:hover {
+    text-decoration: underline;
+}
+.conteneur-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bloc-section {
+    background-color: #140099;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1a00cc; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+.bloc-section h2 {
+    color: #ff5500; 
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.bloc-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.bloc-section p:last-child {
+    margin-bottom: 0;
+}
+.liste-stages {
+    list-style-type: none;
+}
+
+.liste-stages li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.liste-stages li::before {
+    content: "•";
+    color: #ff5500;
+    position: absolute;
+    left: 0;
+}
+
+.footer-site {
+    text-align: center;
+    margin-top: 40px;
+    color: #00aa77;
+    font-size: 0.9rem;
+}
