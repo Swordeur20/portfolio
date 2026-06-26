@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="header">
-    <a href="index.html" class="retour">Retour a l'accueil</a>
+    <a href="index.html" class="retour">accueil</a>
 
     <nav>
         <ul class="menu">
@@ -102,9 +102,8 @@ toggle.addEventListener("click", function(e) {
                 Business
            </h2>
            <p class="orange"><strong>
-               Je travaille actuellement sur mon saas VinFinder. 
-               VinFinder est un bot vinted qui devient une obligation pour les gens qui 
-               voudrais faire de l'achat revente plus rapidement avec de meilleurs profits.</strong>
+               J'aimerais créer mon propre saas pour après le revendre et 
+               gagner assez de quoi vivre de mes investissements</strong>
            </p>
 
         </div>
@@ -151,7 +150,7 @@ toggle.addEventListener("click", function(e) {
             <p class="orange">
                 <strong>No, I'm Not a Human est un jeu vidéo d'horreur psychologique 
                 et de réflexion dans lequel le joueur doit survivre dans un monde inquiétant 
-                où il devient difficile de distinguer les humains des imposteurs. Grâce à son 
+                où il devient difficile de distinguer les humains des visiteurs. Grâce à son 
                 ambiance oppressante et ses choix décisifs, le jeu plonge le joueur dans une expérience 
                 pleine de suspense et de mystère.</strong>
 
@@ -163,10 +162,18 @@ toggle.addEventListener("click", function(e) {
 
 
     <section class="bloc">
-    <video autoplay muted width="300">
-	    <source src="/video/videoteeqzy.mp4" type="video/mp4"/>
-	        Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+    <video id="videoTeeqzy" autoplay muted controls width="300">
+        <source src="/video/videoteeqzy.mp4" type="video/mp4">
     </video>
+
+    <script>
+        const video = document.getElementById("videoTeeqzy");
+
+        video.addEventListener("canplay", () => {
+            video.currentTime = 50; // 1 min 30
+            video.play();
+        }, { once: true });
+    </script>
 
     <div class="texte">
         <h2>Fortnite prime</h2>
@@ -195,7 +202,10 @@ toggle.addEventListener("click", function(e) {
         <div class="texte">
             <h2>Poke Poireau</h2>
             <p class="orange"><strong>
-                Nous avons fais une activité sur l'ia. Pour cela nous avions été sur le site leek wars.</strong>
+                Leek Wars est un jeu de programmation où l'on crée une 
+                intelligence artificielle pour contrôler un poireau dans des combats 
+                stratégiques. Il permet d'apprendre les bases de l'algorithmique et de la 
+                programmation de manière ludique.</strong>
             </p>
         </div>
 

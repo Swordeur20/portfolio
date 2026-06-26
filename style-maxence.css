@@ -17,12 +17,12 @@
 body.dark {
     /* Mode sombre */
     --bg: #030303;
-    --bg-card: #D4C9BE;
+    --bg-card: #222222;
     --text-title: #123458;
     --text: #123458;
     --accent: #D4C9BE;
     --title: white;
-    --title-card: #030303;
+    --title-card: #D4C9BE;
 
     --header-bg: rgba(18, 52, 88, 0.95);
     --footer-bg: rgba(18, 52, 88, 0.95);
@@ -85,9 +85,10 @@ body.dark {
 }
 
 .menu a:hover {
-    color: var(--menu-text);
-}
 
+    color: var(--accent);
+
+}
 
 .footer {
     margin-top: 50px;
